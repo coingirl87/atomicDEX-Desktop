@@ -215,23 +215,23 @@ namespace atomic_dex
         const auto  cfg_path               = atomic_dex::utils::get_atomic_dex_config_folder();
         std::string filename               = std::string(atomic_dex::get_raw_version()) + "-coins." + m_current_wallet_name + ".json";
         std::string custom_tokens_filename = "custom-tokens." + m_current_wallet_name + ".json";
-        // SPDLOG_INFO("Retrieving Wallet information of {}", (cfg_path / filename).string());
 
         LOG_PATH("Retrieving Wallet information of {}", (cfg_path / filename));
         auto retrieve_cfg_functor = [](fs::path path) -> std::unordered_map<std::string, atomic_dex::coin_config>
         {
             if (exists(path))
             {
-                QFile ifs;
-                ifs.setFileName(atomic_dex::std_path_to_qstring(path));
-                ifs.open(QIODevice::ReadOnly | QIODevice::Text);
-                nlohmann::json config_json_data = nlohmann::json::parse(QString(ifs.readAll()).toStdString());
                 try
                 {
-                    auto res = config_json_data.get<std::unordered_map<std::string, atomic_dex::coin_config>>();
+                    QFile ifs;
+                    ifs.setFileName(atomic_dex::std_path_to_qstring(path));
+                    ifs.open(QIODevice::ReadOnly | QIODevice::Text);
+                    nlohmann::json config_json_data = nlohmann::json::parse(QString(ifs.readAll()).toStdString());
+                    auto           res              = config_json_data.get<std::unordered_map<std::string, atomic_dex::coin_config>>();
                     return res;
                 }
-                catch (const std::exception& error) {
+                catch (const std::exception& error)
+                {
                     SPDLOG_ERROR("exception caught: {}", error.what());
                 }
             }
@@ -585,8 +585,8 @@ namespace atomic_dex
         if (!coin_info.is_erc_family)
         {
             t_tx_history_request request{.coin = ticker, .limit = 5000};
-            const bool requires_v2 = coin_info.coin_type == CoinTypeGadget::SLP || coin_info.ticker == "tBCH" || coin_info.ticker == "BCH";
-            nlohmann::json       j = ::mm2::api::template_request("my_tx_history", requires_v2);
+            const bool           requires_v2 = coin_info.coin_type == CoinTypeGadget::SLP || coin_info.ticker == "tBCH" || coin_info.ticker == "BCH";
+            nlohmann::json       j           = ::mm2::api::template_request("my_tx_history", requires_v2);
             ::mm2::api::to_json(j, request);
             batch_array.push_back(j);
         }
@@ -842,7 +842,7 @@ namespace atomic_dex
         for (auto&& coin: coins_to_enable)
         {
             auto&& [request, coins] = request_functor(coin);
-            //SPDLOG_INFO("{} {}", request.dump(4), coins[0]);
+            // SPDLOG_INFO("{} {}", request.dump(4), coins[0]);
             answer_functor(request, coins);
         }
     }
