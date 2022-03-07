@@ -46,14 +46,15 @@ namespace atomic_dex
             Ubiq            = 12,
             KRC20           = 13,
             Moonriver       = 14,
-            HecoChain       = 15,
-            SmartBCH        = 16,
-            EthereumClassic = 17,
-            RSK             = 18,
-            ZHTLC           = 19,
-            Disabled        = 20,
-            All             = 21,
-            Size            = 22
+            Moonbeam        = 15,
+            HecoChain       = 16,
+            SmartBCH        = 17,
+            EthereumClassic = 18,
+            RSK             = 19,
+            ZHTLC           = 20,
+            Disabled        = 21,
+            All             = 22,
+            Size            = 23
         };
 
         Q_ENUM(CoinTypeEnum)

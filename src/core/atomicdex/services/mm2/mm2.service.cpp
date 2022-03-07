@@ -226,8 +226,14 @@ namespace atomic_dex
                 ifs.setFileName(atomic_dex::std_path_to_qstring(path));
                 ifs.open(QIODevice::ReadOnly | QIODevice::Text);
                 nlohmann::json config_json_data = nlohmann::json::parse(QString(ifs.readAll()).toStdString());
-                auto           res              = config_json_data.get<std::unordered_map<std::string, atomic_dex::coin_config>>();
-                return res;
+                try
+                {
+                    auto res = config_json_data.get<std::unordered_map<std::string, atomic_dex::coin_config>>();
+                    return res;
+                }
+                catch (const std::exception& error) {
+                    SPDLOG_ERROR("exception caught: {}", error.what());
+                }
             }
             return {};
         };
@@ -950,6 +956,7 @@ namespace atomic_dex
         case CoinTypeGadget::Ubiq:
         case CoinTypeGadget::KRC20:
         case CoinTypeGadget::Moonriver:
+        case CoinTypeGadget::Moonbeam:
         case CoinTypeGadget::HecoChain:
         case CoinTypeGadget::SmartBCH:
         case CoinTypeGadget::EthereumClassic:
@@ -960,9 +967,7 @@ namespace atomic_dex
             SPDLOG_WARN("Not supported yet");
             break;
         case CoinTypeGadget::Disabled:
-            break;
         case CoinTypeGadget::All:
-            break;
         case CoinTypeGadget::Size:
             break;
         }
@@ -1451,6 +1456,9 @@ namespace atomic_dex
                 break;
             case CoinTypeGadget::Moonriver:
                 out = construct_url_functor("MOVR", "MOVRT", "moonriver_tx_history", "moonriver_tx_history", ticker, address);
+                break;
+            case CoinTypeGadget::Moonbeam:
+                out = construct_url_functor("GLMR", "GLMRT", "moonbeam_tx_history", "moonbeam_tx_history", ticker, address);
                 break;
             case CoinTypeGadget::FTM20:
                 out = construct_url_functor("FTM", "FTMT", "ftm_tx_history", "ftm_tx_history", ticker, address);

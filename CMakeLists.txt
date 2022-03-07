@@ -11,7 +11,7 @@ include(vcpkg_prerequisites)
 include(qt_prerequisites)
 include(cfg_hash)
 
-project(${DEX_PROJECT_NAME} LANGUAGES CXX VERSION 0.5.4)
+project(${DEX_PROJECT_NAME} LANGUAGES CXX VERSION 0.5.5)
 message(STATUS "${PROJECT_NAME} is version ${PROJECT_VERSION}")
 
 include(cmake_default_options)
@@ -62,13 +62,13 @@ endif ()
 #FetchContent_Declare(arrr-cache-db URL http://195.201.0.6/ARRR_CACHE.db DOWNLOAD_NO_EXTRACT TRUE)
 if (APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-6a634c091-Darwin-Release.zip)
+            URL http://195.201.0.6/dev/mm2-db95a0e34-Darwin-Release.zip)
 elseif (UNIX AND NOT APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-6a634c091-Linux-Release.zip)
+            URL http://195.201.0.6/dev/mm2-db95a0e34-Linux-Release.zip)
 else ()
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-6a634c091-Windows_NT-Release.zip)
+            URL http://195.201.0.6/dev/mm2-db95a0e34-Windows_NT-Release.zip)
 endif ()
 
 #FetchContent_Declare(qmaterial URL https://github.com/KomodoPlatform/Qaterial/archive/last-clang-working-2.zip)
