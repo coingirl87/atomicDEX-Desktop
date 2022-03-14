@@ -62,13 +62,13 @@ endif ()
 #FetchContent_Declare(arrr-cache-db URL http://195.201.0.6/ARRR_CACHE.db DOWNLOAD_NO_EXTRACT TRUE)
 if (APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-db95a0e34-Darwin-Release.zip)
+            URL http://195.201.0.6/solana/mm2-bb666f54d-Darwin-Release.zip)
 elseif (UNIX AND NOT APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-db95a0e34-Linux-Release.zip)
+            URL http://195.201.0.6/solana/mm2-bb666f54d-Linux-Release.zip)
 else ()
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/dev/mm2-db95a0e34-Windows_NT-Release.zip)
+            URL http://195.201.0.6/solana/mm2-bb666f54d-Windows_NT-Release.zip)
 endif ()
 
 #FetchContent_Declare(qmaterial URL https://github.com/KomodoPlatform/Qaterial/archive/last-clang-working-2.zip)
@@ -80,7 +80,7 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(jl777-coins
-        URL https://github.com/KomodoPlatform/coins/archive/bch-slp-mainnet-TEST-ONLY.zip)
+        URL https://github.com/KomodoPlatform/coins/archive/solana.zip)
 
 #FetchContent_Declare(adex-generics-coins
 #        URL https://github.com/KomodoPlatform/atomicdex-desktop-generics/archive/main.zip)
