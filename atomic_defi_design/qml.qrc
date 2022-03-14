@@ -56,6 +56,7 @@
         <file>assets/images/coins/btc.png</file>
         <file>assets/images/coins/btcz.png</file>
         <file>assets/images/coins/btt.png</file>
+        <file>assets/images/coins/bttc.png</file>
         <file>assets/images/coins/btu.png</file>
         <file>assets/images/coins/btx.png</file>
         <file>assets/images/coins/busd.png</file>
@@ -155,6 +156,7 @@
         <file>assets/images/coins/kmd.png</file>
         <file>assets/images/coins/knc.png</file>
         <file>assets/images/coins/koin.png</file>
+        <file>assets/images/coins/ksm.png</file>
         <file>assets/images/coins/labs.png</file>
         <file>assets/images/coins/lbc.png</file>
         <file>assets/images/coins/lcc.png</file>
@@ -384,6 +386,7 @@
         <file>Dex/Components/ComponentWithTitle.qml</file>
         <file>Dex/Components/CopyFieldButton.qml</file>
         <file>Dex/Components/DangerButton.qml</file>
+        <file>Dex/Components/DefaultAlertIcon.qml</file>
         <file>Dex/Components/DefaultAnimatedImage.qml</file>
         <file>Dex/Components/DefaultBusyIndicator.qml</file>
         <file>Dex/Components/DefaultButton.qml</file>
