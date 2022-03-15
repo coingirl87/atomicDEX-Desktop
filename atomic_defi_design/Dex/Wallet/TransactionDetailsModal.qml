@@ -97,6 +97,7 @@ BasicModal
             Layout.fillWidth: true
             Layout.preferredHeight: addressColumn.height + 10
             color: DexTheme.contentColorTop
+
             Column
             {
                 id: addressColumn
@@ -115,7 +116,9 @@ BasicModal
                 {
                     width: parent.width
                     title: qsTr("To")
-                    model: !details ? [] : details.to
+                    model: !details ?
+                           [] : details.to.length > 1 ?
+                           General.arrayExclude(details.to, details.from[0]) : details.to
                     linkURL: !details ? "" :General.getAddressExplorerURL(api_wallet_page.ticker, details.to)
                     onCopyNotificationTitle: qsTr("To address")
                 }

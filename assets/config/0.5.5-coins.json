@@ -1292,6 +1292,24 @@
     "active": false,
     "currently_enabled": false
   },
+  "BTTC-BEP20": {
+    "coin": "BTTC-BEP20",
+    "name": "BitTorrent",
+    "coinpaprika_id": "bttc-bittorrent-chain",
+    "coingecko_id": "bittorrent",
+    "nomics_id": "BTT2",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "BTU-ERC20": {
     "coin": "BTU-ERC20",
     "name": "BTU Protocol",
@@ -4263,6 +4281,22 @@
     "type": "Moonriver",
     "name": "Moonriver"
   },
+  "GLMR": {
+    "active": false,
+    "coin": "GLMR",
+    "coingecko_id": "moonbeam",
+    "coinpaprika_id": "glmr-moonbeam",
+    "nomics_id": "GLMR",
+    "currently_enabled": false,
+    "nodes": [
+      "https://rpc.api.moonbeam.network"
+    ],
+    "explorer_url": [
+      "https://moonscan.io/"
+    ],
+    "type": "Moonbeam",
+    "name": "Moonbeam"
+  },
   "ETH": {
     "active": false,
     "coin": "ETH",
@@ -4658,6 +4692,7 @@
     "name": "USD Inflation Coin",
     "coinpaprika_id": "test-coin",
     "coingecko_id": "test-coin",
+    "nomics_id": "USDI",
     "electrum": [
       {
         "url": "usdi1.blackcoin.nl:10002",
@@ -4669,8 +4704,10 @@
       }
     ],
     "explorer_url": [
-      "https://usdiexplorer.com/"
+      "https://chainz.cryptoid.info/usdi/"
     ],
+    "explorer_tx_url": "tx.dws?",
+    "explorer_address_url": "address.dws?",
     "type": "UTXO",
     "active": false,
     "currently_enabled": false
@@ -4968,6 +5005,24 @@
     "coinpaprika_id": "kmd-komodo",
     "coingecko_id": "komodo",
     "nomics_id": "KMD",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "KSM-BEP20": {
+    "coin": "KSM-BEP20",
+    "name": "Kusama",
+    "coinpaprika_id": "ksm-kusama",
+    "coingecko_id": "kusama",
+    "nomics_id": "KSM",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -5433,11 +5488,7 @@
       {
         "url": "electrumx.live:50010",
         "protocol": "TCP"
-      },
-      {
-        "url": "electrumxprux02.sytes.net:50001",
-        "protocol": "TCP"
-      }	  	      
+      }
       ],
       "explorer_url": [
         "https://explorer.prux.info/"
@@ -6678,10 +6729,16 @@
     "nomics_id": "SPACE7",
     "electrum": [
       {
-        "url": "electrum1.spaceworks.co:50001"
+        "url": "electrum3.cipig.net:10011",
+        "ws_url": "electrum3.cipig.net:30011"
       },
       {
-        "url": "electrum2.spaceworks.co:50001"
+        "url": "electrum2.cipig.net:10011",
+        "ws_url": "electrum2.cipig.net:30011"
+      },
+      {
+        "url": "electrum1.cipig.net:10011",
+        "ws_url": "electrum1.cipig.net:30011"
       }
     ],
     "explorer_url": [
@@ -7352,6 +7409,7 @@
     "active": false,
     "coinpaprika_id": "xrg-ergon",
     "coingecko_id": "test-coin",
+    "nomics_id": "XRG",
     "currently_enabled": false,
     "electrum": [
       {
@@ -9602,6 +9660,31 @@
       "https://bscscan.com/"
     ],
     "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+    "IC": {
+    "coin": "IC",
+    "name": "Ignition",
+    "coingecko_id": "ignition",
+    "coinpaprika_id": "ic-ignition",
+    "nomics_id": "IC",
+    "electrum": [
+      {
+        "url": "electrum1.ignitioncoin.org:10001",
+        "protocol": "TCP"
+      },
+      {
+        "url": "electrum2.ignitioncoin.org:10001",
+        "protocol": "TCP"
+      }
+    ],
+    "explorer_url": [
+      "https://chainz.cryptoid.info/ic/"
+    ],
+    "explorer_tx_url": "tx.dws?",
+    "explorer_address_url": "address.dws?",
+    "type": "UTXO",
     "active": false,
     "currently_enabled": false
   }

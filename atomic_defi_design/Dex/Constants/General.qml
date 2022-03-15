@@ -226,6 +226,16 @@ QtObject {
         }
     }
 
+    function flipFalse(obj) {
+        if (obj === false) return true
+        return obj
+    }
+
+    function flipTrue(obj) {
+        if (obj === true) return false
+        return obj
+    }
+
     function getFeesDetail(fees) {
         return [
             {"label": qsTr("<b>Taker tx fee:</b> "), "fee": fees.base_transaction_fees, "ticker": fees.base_transaction_fees_ticker},
@@ -246,6 +256,12 @@ QtObject {
             ).arg(
                 General.getFiatText(amount, ticker, false)
             )
+    }
+
+    function arrayExclude(arr, excl) {
+        let i = arr.indexOf(excl)
+        if (i > -1) arr.splice(i, 1);
+        return arr
     }
 
     function absString(str) {
@@ -370,9 +386,13 @@ QtObject {
     }
 
     function formatCrypto(received, amount, ticker, fiat_amount, fiat) {
-        return diffPrefix(received) +  atomic_qt_utilities.retrieve_main_ticker(ticker) + " " + formatDouble(amount) + (fiat_amount ? " (" + formatFiat("", fiat_amount, fiat) + ")" : "")
+        return diffPrefix(received) + ticker + " " + formatDouble(amount) + (fiat_amount ? " (" + formatFiat("", fiat_amount, fiat) + ")" : "")
     }
-    
+
+    function formatFullCrypto(received, amount, ticker, fiat_amount, fiat, use_full_ticker) {
+        if (!use_full_ticker) ticker = atomic_qt_utilities.retrieve_main_ticker(ticker)
+        return formatCrypto(received, amount, ticker, fiat_amount, fiat)
+    }
 
     function fullCoinName(name, ticker) {
         return name + " (" + ticker + ")"
@@ -494,6 +514,11 @@ QtObject {
 
 
         return tx_fee + "\n" + trading_fee +"<br>"+minimum_amount
+    }
+
+    function validateWallet(wallet_name) {
+        if (wallet_name.length >= 25) return "Wallet name must 25 chars or less"
+        return checkIfWalletExists(wallet_name)
     }
 
     function txFeeText(trade_info, base_ticker, has_info_icon=true, has_limited_space=false) {
@@ -920,6 +945,15 @@ QtObject {
                                                 "BTT/JEUR": "BINANCE:BTTEUR",
                                                 "BTT/TRYB": "BINANCE:BTTTRY",
                                                 "BTT/BRZ": "BINANCE:BTTBRL",
+                                                "BTTC/USDT": "BINANCE:BTTCUSDT",
+                                                "BTTC/BUSD": "BINANCE:BTTCUSDT",
+                                                "BTTC/USDC": "BINANCE:BTTCUSDT",
+                                                "BTTC/TUSD": "BINANCE:BTTCUSDT",
+                                                "BTTC/HUSD": "BINANCE:BTTCUSDT",
+                                                "BTTC/UST": "BINANCE:BTTCUSDT",
+                                                "BTTC/DAI": "BINANCE:BTTCUSDT",
+                                                "BTTC/PAX": "BINANCE:BTTCUSDT",
+                                                "BTTC/TRYB": "BINANCE:BTTCTRY",
                                                 "BTU/BTC": "BITTREX:BTUBTC",
                                                 "BTU/USDT": "BITTREX:BTUUSD",
                                                 "BTU/BUSD": "BITTREX:BTUUSD",
@@ -1570,6 +1604,22 @@ QtObject {
                                                 "KNC/PAX": "COINBASE:KNCUSD",
                                                 "KNC/EURS": "KRAKEN:KNCEUR",
                                                 "KNC/JEUR": "KRAKEN:KNCEUR",
+                                                "KSM/BTC": "BINANCE:KSMBTC",
+                                                "KSM/ETH": "KRAKEN:KSMETH",
+                                                "KSM/USDT": "KRAKEN:KSMUSD",
+                                                "KSM/BUSD": "KRAKEN:KSMUSD",
+                                                "KSM/USDC": "KRAKEN:KSMUSD",
+                                                "KSM/TUSD": "KRAKEN:KSMUSD",
+                                                "KSM/HUSD": "KRAKEN:KSMUSD",
+                                                "KSM/UST": "KRAKEN:KSMUSD",
+                                                "KSM/DAI": "KRAKEN:KSMUSD",
+                                                "KSM/PAX": "KRAKEN:KSMUSD",
+                                                "KSM/EURS": "KRAKEN:KSMEUR",
+                                                "KSM/JEUR": "KRAKEN:KSMEUR",
+                                                "KSM/JGBP": "KRAKEN:KSMGBP",
+                                                "KSM/CADC": "EIGHTCAP:KSMCAD",
+                                                "KSM/BNB": "BINANCE:KSMBNB",
+                                                "KSM/HT": "HUOBI:KSMHT",
                                                 "LBC/BTC": "BITTREX:LBCBTC",
                                                 "LBC/ETH": "BITTREX:LBCETH",
                                                 "LBC/USDT": "BITTREX:LBCUSD",
