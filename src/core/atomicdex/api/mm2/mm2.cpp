@@ -22,6 +22,7 @@
 #include "atomicdex/api/mm2/rpc.best.orders.hpp"
 #include "atomicdex/api/mm2/rpc.convertaddress.hpp"
 #include "atomicdex/api/mm2/rpc.enable.bch.with.tokens.hpp"
+#include "atomicdex/api/mm2/rpc.enable.solana.with.tokens.hpp"
 #include "atomicdex/api/mm2/rpc.enable.slp.hpp"
 #include "atomicdex/api/mm2/rpc.min.volume.hpp"
 #include "atomicdex/api/mm2/rpc.orderbook.hpp"
@@ -699,22 +700,23 @@ namespace mm2::api
         return answer;
     }
 
-    template mm2::api::withdraw_answer               rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::my_orders_answer              rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::orderbook_answer              rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::trade_fee_answer              rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::max_taker_vol_answer          rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::min_volume_answer             rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::my_recent_swaps_answer        rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::active_swaps_answer           rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::show_priv_key_answer          rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::trade_preimage_answer         rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::best_orders_answer            rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::validate_address_answer       rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::convert_address_answer        rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::recover_funds_of_swap_answer  rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::enable_bch_with_tokens_answer rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
-    template mm2::api::enable_slp_answer             rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::withdraw_answer                  rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::my_orders_answer                 rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::orderbook_answer                 rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::trade_fee_answer                 rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::max_taker_vol_answer             rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::min_volume_answer                rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::my_recent_swaps_answer           rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::active_swaps_answer              rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::show_priv_key_answer             rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::trade_preimage_answer            rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::best_orders_answer               rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::validate_address_answer          rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::convert_address_answer           rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::recover_funds_of_swap_answer     rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::enable_bch_with_tokens_answer    rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::enable_solana_with_tokens_answer rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::enable_slp_answer                rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
 
     void
     set_system_manager(ag::ecs::system_manager& system_manager)

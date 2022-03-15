@@ -16,10 +16,10 @@
 
 //! QT Headers
 #include <QClipboard>
+#include <QFile>
 #include <QGuiApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
-#include <QFile>
 
 //! Deps
 #include <QrCode.hpp>
@@ -54,6 +54,10 @@ namespace atomic_dex
         [[maybe_unused]] const ag::ecs::system_manager& system_manager)
     {
         QString change_24h = "0";
+        if (!coin.is_mainnet)
+        {
+            return change_24h;
+        }
         if (is_this_currency_a_fiat(config, config.current_currency))
         {
             change_24h = QString::fromStdString(provider.get_change_24h(utils::retrieve_main_ticker(coin.ticker)));
@@ -109,15 +113,16 @@ namespace atomic_dex
     }
 
     QStringList
-    qt_utilities::get_themes_list() const 
+    qt_utilities::get_themes_list() const
     {
         QStringList    out;
         const fs::path theme_path = atomic_dex::utils::get_themes_path();
-        for (auto&& cur: fs::directory_iterator(theme_path)) 
+        for (auto&& cur: fs::directory_iterator(theme_path))
         {
-            if (!fs::exists(cur.path() / "colors.json")) continue;
+            if (!fs::exists(cur.path() / "colors.json"))
+                continue;
 
-            out << std_path_to_qstring(cur.path().filename()); 
+            out << std_path_to_qstring(cur.path().filename());
         }
         return out;
     }
@@ -144,11 +149,11 @@ namespace atomic_dex
     }
 
     QVariantMap
-    atomic_dex::qt_utilities::load_theme(const QString& theme_name) const 
+    atomic_dex::qt_utilities::load_theme(const QString& theme_name) const
     {
         QVariantMap out;
         using namespace std::string_literals;
-        
+
         // Loads color scheme.
         fs::path file_path = atomic_dex::utils::get_themes_path() / theme_name.toStdString() / "colors.json";
         if (fs::exists(file_path))

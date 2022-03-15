@@ -6818,6 +6818,70 @@
     "active": false,
     "currently_enabled": false
   },
+  "SOL": {
+    "coin": "SOL",
+    "name": "Solana",
+    "coinpaprika_id": "sol-solana",
+    "coingecko_id": "solana",
+    "nomics_id": "SOL",
+    "nodes": [
+      "https://api.mainnet-beta.solana.com"
+    ],
+    "explorer_url": [
+      "https://explorer.solana.com/"
+    ],
+    "type": "Solana",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SOL-DEVNET": {
+    "coin": "SOL-DEVNET",
+    "name": "Solana (Devnet)",
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "is_devnet": true,
+    "nodes": [
+      "https://api.devnet.solana.com"
+    ],
+    "explorer_url": [
+      "https://explorer.solana.com/"
+    ],
+    "explorer_suffix": "?cluster=devnet",
+    "type": "Solana",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SOL-TESTNET": {
+    "coin": "SOL-TESTNET",
+    "name": "Solana (Testnet)",
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "is_testnet": true,
+    "nodes": [
+      "https://api.testnet.solana.com"
+    ],
+    "explorer_url": [
+      "https://explorer.solana.com/"
+    ],
+    "explorer_suffix": "?cluster=testnet",
+    "type": "Solana",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ADEXSPL-DEVNET": {
+    "coin": "ADEXSPL-DEVNET",
+    "active": false,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "is_devnet": true,
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://explorer.solana.com/"
+    ],
+    "explorer_suffix": "?cluster=devnet",
+    "type": "Solana",
+    "name": "AtomicDEX SPL (devnet)"
+  },
   "SOL-BEP20": {
     "coin": "SOL-BEP20",
     "name": "Solana",

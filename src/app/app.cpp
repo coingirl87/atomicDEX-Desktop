@@ -74,9 +74,7 @@ namespace atomic_dex
             return false;
         }
 
-        std::unordered_map<CoinType, std::array<std::vector<coin_config>, 2>> enable_registry;
-        const std::size_t testnet_idx = 0;
-        const std::size_t mainnet_idx = 1;
+        std::unordered_map<CoinType, std::array<std::vector<coin_config>, 3>> enable_registry;
         atomic_dex::mm2_service& mm2 = get_mm2();
         std::unordered_set<std::string> visited;
         for (auto&& coin : coins) {
@@ -85,7 +83,13 @@ namespace atomic_dex
                 continue;
             }
             auto coin_info = mm2.get_coin_info(coin.toStdString());
-            const bool is_tesnet = coin_info.is_testnet.value_or(false);
+            std::size_t  target_idx = 0;
+            if (coin_info.is_mainnet) {
+                target_idx = 1;
+            }
+            else if (coin_info.is_devnet.value_or(false)) {
+                target_idx = 2;
+            }
             if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
             {
                 auto coin_parent_info = mm2.get_coin_info(coin_info.fees_ticker);
@@ -93,11 +97,11 @@ namespace atomic_dex
                 {
                     SPDLOG_INFO("Adding extra coin: {} to enable", coin_parent_info.ticker);
                     const auto coin_type = (coin_parent_info.ticker == "BCH" || coin_parent_info.ticker == "tBCH") ? CoinType::SLP : coin_parent_info.coin_type;
-                    enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_parent_info);
+                    enable_registry[coin_type][target_idx].push_back(coin_parent_info);
                 }
             }
             const auto coin_type = (coin_info.ticker == "BCH" || coin_info.ticker == "tBCH") ? CoinType::SLP : coin_info.coin_type;
-            enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            enable_registry[coin_type][target_idx].push_back(coin_info);
             visited.insert(coin_info.ticker);
         }
 

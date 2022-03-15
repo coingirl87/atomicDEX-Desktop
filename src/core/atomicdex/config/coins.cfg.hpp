@@ -58,8 +58,11 @@ namespace atomic_dex
         std::vector<std::string>        explorer_url; ///< usefull for transaction, take this url and append transaction id
         std::string                     tx_uri{"tx/"};
         std::string                     address_url{"address/"};
+        std::optional<std::string>      explorer_suffix{std::nullopt};
         std::optional<nlohmann::json>   custom_backup;
         std::optional<bool>             is_testnet{false}; ///< True if testnet (tBTC, tQTUM, QRC-20 on testnet, tETH)
+        std::optional<bool>             is_devnet{false}; ///< True if testnet (tBTC, tQTUM, QRC-20 on testnet, tETH)
+        bool                            is_mainnet{false}; ///< True if mainnet
         CoinType                        coin_type;
         bool                            checked{false};
         bool                            wallet_only{false};

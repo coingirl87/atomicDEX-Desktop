@@ -62,12 +62,6 @@ namespace mm2::api
     }
 
     void
-    from_json(const nlohmann::json& j, derivation_infos& answer)
-    {
-        answer.type = j.at("type").get<std::string>();
-    }
-
-    void
     from_json(const nlohmann::json& j, bch_address_infos& answer)
     {
         answer.derivation_method = j.at("derivation_method").get<derivation_infos>();

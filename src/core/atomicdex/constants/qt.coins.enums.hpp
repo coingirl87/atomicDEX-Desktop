@@ -52,9 +52,10 @@ namespace atomic_dex
             EthereumClassic = 18,
             RSK             = 19,
             ZHTLC           = 20,
-            Disabled        = 21,
-            All             = 22,
-            Size            = 23
+            Solana          = 21,
+            Disabled        = 22,
+            All             = 23,
+            Size            = 24
         };
 
         Q_ENUM(CoinTypeEnum)

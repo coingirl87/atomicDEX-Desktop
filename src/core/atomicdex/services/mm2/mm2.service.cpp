@@ -31,6 +31,7 @@
 #include "atomicdex/api/mm2/rpc.enable.bch.with.tokens.hpp"
 #include "atomicdex/api/mm2/rpc.enable.hpp"
 #include "atomicdex/api/mm2/rpc.enable.slp.hpp"
+#include "atomicdex/api/mm2/rpc.enable.solana.with.tokens.hpp"
 #include "atomicdex/api/mm2/rpc.min.volume.hpp"
 #include "atomicdex/api/mm2/rpc.tx.history.hpp"
 #include "atomicdex/config/mm2.cfg.hpp"
@@ -468,9 +469,7 @@ namespace atomic_dex
 
         std::vector<std::string>                                              second_tickers;
         std::vector<std::string>                                              tickers;
-        std::unordered_map<CoinType, std::array<std::vector<coin_config>, 2>> enable_registry;
-        const std::size_t                                                     testnet_idx = 0;
-        const std::size_t                                                     mainnet_idx = 1;
+        std::unordered_map<CoinType, std::array<std::vector<coin_config>, 3>> enable_registry;
         std::unordered_set<std::string>                                       visited;
         for (auto&& coin: coins)
         {
@@ -480,7 +479,14 @@ namespace atomic_dex
                 continue;
             }
             auto&      coin_info = coin;
-            const bool is_tesnet = coin_info.is_testnet.value_or(false);
+            // testnet
+            std::size_t  target_idx = 0;
+            if (coin_info.is_mainnet) {
+                target_idx = 1;
+            }
+            else if (coin_info.is_devnet.value_or(false)) {
+                target_idx = 2;
+            }
             if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
             {
                 auto coin_parent_info = get_coin_info(coin_info.fees_ticker);
@@ -488,11 +494,12 @@ namespace atomic_dex
                 {
                     SPDLOG_INFO("Adding extra coin: {} to enable", coin_parent_info.ticker);
                     const auto coin_type = (coin_parent_info.ticker == "BCH" || coin_parent_info.ticker == "tBCH") ? CoinType::SLP : coin_parent_info.coin_type;
-                    enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_parent_info);
+                    enable_registry[coin_type][target_idx].push_back(coin_parent_info);
                 }
             }
+            SPDLOG_INFO("ticker: {}", coin_info.ticker);
             const auto coin_type = (coin_info.ticker == "BCH" || coin_info.ticker == "tBCH") ? CoinType::SLP : coin_info.coin_type;
-            enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            enable_registry[coin_type][target_idx].push_back(coin_info);
             visited.insert(coin_info.ticker);
         }
 
@@ -560,6 +567,10 @@ namespace atomic_dex
                                 }
                             }
 
+                            if (tokens_to_fetch.empty()) {
+                                // TODO: not good enough need to clean
+                                this->dispatcher_.trigger<tx_fetch_finished>();
+                            }
                             for (auto&& coin: tokens_to_fetch) { process_tx_tokenscan(coin, is_a_reset); }
                         }
                     }
@@ -582,7 +593,7 @@ namespace atomic_dex
         std::vector<std::string> tokens_to_fetch;
         const auto&              ticker    = get_current_ticker();
         auto                     coin_info = get_coin_info(ticker);
-        if (!coin_info.is_erc_family)
+        if (!coin_info.is_erc_family && coin_info.coin_type != CoinTypeGadget::Solana)
         {
             t_tx_history_request request{.coin = ticker, .limit = 5000};
             const bool           requires_v2 = coin_info.coin_type == CoinTypeGadget::SLP || coin_info.ticker == "tBCH" || coin_info.ticker == "BCH";
@@ -590,7 +601,7 @@ namespace atomic_dex
             ::mm2::api::to_json(j, request);
             batch_array.push_back(j);
         }
-        else
+        else if (coin_info.is_erc_family)
         {
             tokens_to_fetch.push_back(ticker);
         }
@@ -679,14 +690,118 @@ namespace atomic_dex
     }
 
     void
+    mm2_service::process_solana_with_tokens(std::vector<coin_config> coins_to_enable)
+    {
+        SPDLOG_INFO("process_solana_with_tokens");
+        auto        solana_functor_is_testnet = [](auto&& coin_cfg) { return coin_cfg.is_testnet.value_or(false); };
+        auto        solana_functor_is_devnet  = [](auto&& coin_cfg) { return coin_cfg.is_devnet.value_or(false); };
+        const bool  is_testnet                = std::any_of(begin(coins_to_enable), end(coins_to_enable), solana_functor_is_testnet);
+        const bool  is_devnet                 = std::any_of(begin(coins_to_enable), end(coins_to_enable), solana_functor_is_devnet);
+        std::string parent_ticker             = "SOL";
+        if (is_testnet)
+        {
+            parent_ticker = "SOL-TESTNET";
+        }
+        else if (is_devnet)
+        {
+            parent_ticker = "SOL-DEVNET";
+        }
+        auto request_functor = [this, coins_to_enable, parent_ticker]() -> std::pair<nlohmann::json, std::vector<std::string>>
+        {
+            std::vector<mm2::api::spl_token_request> requests_spl;
+            std::vector<std::string>                 tickers{parent_ticker};
+            for (auto&& coin: coins_to_enable)
+            {
+                if (coin.ticker != parent_ticker)
+                {
+                    requests_spl.push_back(mm2::api::spl_token_request{.ticker = coin.ticker});
+                    tickers.push_back(coin.ticker);
+                }
+            }
+            t_enable_solana_with_tokens_request request{
+                .ticker             = parent_ticker,
+                .urls               = get_coin_info(parent_ticker).urls.value_or(std::vector<std::string>{}),
+                .tx_history         = false,
+                .spl_token_requests = std::move(requests_spl)};
+            nlohmann::json out = ::mm2::api::template_request("enable_solana_with_tokens", true);
+            ::mm2::api::to_json(out, request);
+            nlohmann::json batch = nlohmann::json::array();
+            batch.push_back(out);
+            return {batch, tickers};
+        };
+
+        auto answer_functor = [this, parent_ticker](nlohmann::json batch, std::vector<std::string> tickers)
+        {
+            auto rpc_answer_functor = [this, tickers, parent_ticker](web::http::http_response resp) mutable
+            {
+                try
+                {
+                    auto answers                = ::mm2::api::basic_batch_answer(resp);
+                    auto solana_with_tokens_answer = ::mm2::api::rpc_process_answer_batch<t_enable_solana_with_tokens_answer>(answers[0], "enable_solana_with_tokens");
+                    if (solana_with_tokens_answer.error.has_value())
+                    {
+                        auto error = solana_with_tokens_answer.error.value();
+                        for (auto&& ticker: tickers) { this->dispatcher_.trigger<enabling_coin_failed>(ticker, error.error); }
+                        SPDLOG_ERROR("{} {}", error.error, error.error_data.dump(4));
+                    }
+                    else
+                    {
+                        auto answer_success = solana_with_tokens_answer.result.value();
+                        for (auto&& [key, value]: answer_success.solana_addresses_infos)
+                        {
+                            nlohmann::json out{{"coin", parent_ticker}, {"balance", value.balances.spendable}, {"address", key}};
+                            {
+                                std::unique_lock lock(m_coin_cfg_mutex);
+                                m_coins_informations[parent_ticker].currently_enabled = true;
+                            }
+                            this->process_balance_answer(out);
+                            break;
+                        }
+
+                        for (auto&& [key, values]: answer_success.spl_addresses_infos)
+                        {
+                            for (auto&& [cur_ticker, balance]: values.balances)
+                            {
+                                nlohmann::json out{{"coin", cur_ticker}, {"balance", balance.spendable}, {"address", key}};
+                                {
+                                    std::unique_lock lock(m_coin_cfg_mutex);
+                                    m_coins_informations[cur_ticker].currently_enabled = true;
+                                }
+                                this->process_balance_answer(out);
+                            }
+                            break;
+                        }
+
+                        this->dispatcher_.trigger<coin_fully_initialized>(tickers);
+                        this->m_nb_update_required += 1;
+                    }
+                }
+                catch (const std::exception& error)
+                {
+                    SPDLOG_ERROR("exception caught in bch_enable: {}", error.what());
+                    for (auto&& ticker: tickers) { this->dispatcher_.trigger<enabling_coin_failed>(ticker, error.what()); }
+                }
+            };
+
+            auto error_rpc_functor = [this, tickers, batch](pplx::task<void> previous_task)
+            { this->handle_exception_pplx_task(previous_task, "batch_enable_coins bch electrum", batch); };
+
+            m_mm2_client.async_rpc_batch_standalone(batch).then(rpc_answer_functor).then(error_rpc_functor);
+        };
+
+        auto&& [request, coins] = request_functor();
+        SPDLOG_INFO("solana: {}", request.dump(4));
+        answer_functor(request, coins);
+    }
+
+    void
     mm2_service::process_bch_with_tokens(std::vector<coin_config> coins_to_enable)
     {
-        auto request_functor = [this, coins_to_enable]() -> std::pair<nlohmann::json, std::vector<std::string>>
+        auto              bch_functor   = [](auto&& coin_cfg) { return coin_cfg.is_testnet.value_or(false); };
+        const bool        is_testnet    = std::any_of(begin(coins_to_enable), end(coins_to_enable), bch_functor);
+        const std::string parent_ticker = is_testnet ? "tBCH" : "BCH";
+        auto request_functor = [this, coins_to_enable, parent_ticker]() -> std::pair<nlohmann::json, std::vector<std::string>>
         {
-            auto              bch_functor   = [](auto&& coin_cfg) { return coin_cfg.is_testnet.value_or(false); };
-            const bool        is_testnet    = std::any_of(begin(coins_to_enable), end(coins_to_enable), bch_functor);
-            const std::string parent_ticker = is_testnet ? "tBCH" : "BCH";
-
             mm2::api::enable_mode mode{
                 .rpc      = "Electrum",
                 .rpc_data = mm2::api::enable_rpc_data{.servers = get_coin_info(parent_ticker).electrum_urls.value_or(std::vector<electrum_server>{})}};
@@ -714,9 +829,9 @@ namespace atomic_dex
             return {batch, tickers};
         };
 
-        auto answer_functor = [this](nlohmann::json batch, std::vector<std::string> tickers)
+        auto answer_functor = [this, parent_ticker](nlohmann::json batch, std::vector<std::string> tickers)
         {
-            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable
+            auto rpc_answer_functor = [this, tickers, parent_ticker](web::http::http_response resp) mutable
             {
                 try
                 {
@@ -733,8 +848,6 @@ namespace atomic_dex
                         auto answer_success = bch_with_tokens_answer.result.value();
                         for (auto&& [key, value]: answer_success.bch_addresses_infos)
                         {
-                            const bool     is_testnet    = key.find("test") != std::string::npos;
-                            std::string    parent_ticker = is_testnet ? "tBCH" : "BCH";
                             nlohmann::json out{{"coin", parent_ticker}, {"balance", value.balances.spendable}, {"address", key}};
                             {
                                 std::unique_lock lock(m_coin_cfg_mutex);
@@ -943,6 +1056,14 @@ namespace atomic_dex
             const bool has_parent  = ranges::any_of(coins_to_enable, bch_functor);
             atomic_dex::print_coins(coins_to_enable);
             has_parent ? this->process_bch_with_tokens(coins_to_enable) : this->process_slp(coins_to_enable);
+            break;
+        }
+        case CoinTypeGadget::Solana:
+        {
+            auto       solana_functor = [](auto&& coin_cfg) { return coin_cfg.ticker == "SOL" || coin_cfg.ticker == "SOL-TESTNET" || coin_cfg.ticker == "SOL-DEVNET"; };
+            const bool has_parent  = ranges::any_of(coins_to_enable, solana_functor);
+            atomic_dex::print_coins(coins_to_enable);
+            has_parent ? this->process_solana_with_tokens(coins_to_enable) : this->process_slp(coins_to_enable);
             break;
         }
         case CoinTypeGadget::ERC20:
@@ -1811,6 +1932,7 @@ namespace atomic_dex
         if (ticker != get_current_ticker())
         {
             m_current_ticker = ticker;
+            m_tx_informations->clear();
             return true;
         }
         return false;

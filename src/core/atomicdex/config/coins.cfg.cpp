@@ -45,7 +45,7 @@ namespace atomic_dex
         }
         if (j.contains("bchd_urls"))
         {
-            cfg.bchd_urls = j.at("bchd_urls").get<std::vector<std::string>>();
+            cfg.bchd_urls             = j.at("bchd_urls").get<std::vector<std::string>>();
             cfg.allow_slp_unsafe_conf = j.at("allow_slp_unsafe_conf").get<bool>();
         }
         cfg.is_claimable         = j.count("is_claimable") > 0;
@@ -94,6 +94,11 @@ namespace atomic_dex
         {
             cfg.is_testnet = j.at("is_testnet").get<bool>();
         }
+        if (j.contains("is_devnet"))
+        {
+            cfg.is_devnet = j.at("is_devnet").get<bool>();
+        }
+        cfg.is_mainnet = !cfg.is_testnet.value_or(false) && !cfg.is_devnet.value_or(false);
         if (cfg.type == "QRC-20")
         {
             cfg.coin_type = CoinType::QRC20;
@@ -177,6 +182,10 @@ namespace atomic_dex
         else if (cfg.type == "RSK Smart Bitcoin")
         {
             cfg.coin_type = CoinType::RSK;
+        }
+        else if (cfg.type == "Solana")
+        {
+            cfg.coin_type = CoinType ::Solana;
         }
         if (j.contains("wallet_only"))
         {
@@ -273,9 +282,36 @@ namespace atomic_dex
             cfg.has_parent_fees_ticker = true;
             cfg.fees_ticker            = cfg.is_testnet.value() ? "tBCH" : "BCH";
             break;
+        case CoinType::Solana:
+            cfg.has_parent_fees_ticker = true;
+            if (cfg.is_testnet.value())
+            {
+                cfg.fees_ticker = "SOL-TESTNET";
+            }
+            else if (cfg.is_devnet.value())
+            {
+                cfg.fees_ticker = "SOL-DEVNET";
+            }
+            else
+            {
+                cfg.fees_ticker = "SOL";
+            }
+            break;
         default:
             cfg.has_parent_fees_ticker = false;
             cfg.fees_ticker            = cfg.ticker;
+            break;
+        case CoinTypeGadget::UTXO:
+            break;
+        case CoinTypeGadget::SmartChain:
+            break;
+        case CoinTypeGadget::ZHTLC:
+            break;
+        case CoinTypeGadget::Disabled:
+            break;
+        case CoinTypeGadget::All:
+            break;
+        case CoinTypeGadget::Size:
             break;
         }
     }
@@ -285,9 +321,7 @@ namespace atomic_dex
     {
         std::stringstream ss;
         ss << "[";
-        for (auto&& coin: coins) {
-            ss << coin.ticker << " ";
-        }
+        for (auto&& coin: coins) { ss << coin.ticker << " "; }
         ss << "]";
         SPDLOG_INFO("{}", ss.str());
     }

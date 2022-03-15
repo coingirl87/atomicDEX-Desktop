@@ -3,6 +3,7 @@
 #include "atomicdex/config/electrum.cfg.hpp"
 #include "format.address.hpp"
 #include "generic.error.hpp"
+#include "derivation.infos.hpp"
 #include "utxo.merge.params.hpp"
 #include "balance.infos.hpp"
 
@@ -77,13 +78,6 @@ namespace mm2::api
     };
 
     void to_json(nlohmann::json& j, const enable_bch_with_tokens_request& cfg);
-
-    struct derivation_infos
-    {
-        std::string type;
-    };
-
-    void from_json(const nlohmann::json& j, derivation_infos& answer);
 
     struct bch_address_infos
     {

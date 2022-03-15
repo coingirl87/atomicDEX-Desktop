@@ -192,6 +192,10 @@ namespace atomic_dex
         {
             return "1";
         }
+        auto&       mm2       = m_system_manager.get_system<mm2_service>();
+        if (!mm2.get_coin_info(ticker_in).is_mainnet) {
+            return "0";
+        }
         std::string ticker =  utils::retrieve_main_ticker(ticker_in);
         try
         {

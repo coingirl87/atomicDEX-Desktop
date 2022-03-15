@@ -259,6 +259,7 @@ QtObject {
             case 'SmartBCH':    return getCoinColor("SBCH")
             case 'Ethereum Classic':  return getCoinColor("ETC")
             case 'RSK Smart Bitcoin': return getCoinColor("BTC")
+            case 'Solana': return getCoinColor("SOL")
             default:            return getCoinColor("BTC")
         }
     }
