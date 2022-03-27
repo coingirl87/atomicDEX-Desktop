@@ -62,13 +62,13 @@ endif ()
 #FetchContent_Declare(arrr-cache-db URL http://195.201.0.6/ARRR_CACHE.db DOWNLOAD_NO_EXTRACT TRUE)
 if (APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/solana/mm2-bb666f54d-Darwin-Release.zip)
+            URL http://195.201.0.6/solana/mm2-683d441b7-Darwin-Release.zip)
 elseif (UNIX AND NOT APPLE)
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/solana/mm2-bb666f54d-Linux-Release.zip)
+            URL http://195.201.0.6/solana/mm2-683d441b7-Linux-Release.zip)
 else ()
     FetchContent_Declare(mm2
-            URL http://195.201.0.6/solana/mm2-bb666f54d-Windows_NT-Release.zip)
+            URL http://195.201.0.6/solana/mm2-683d441b7-Windows_NT-Release.zip)
 endif ()
 
 #FetchContent_Declare(qmaterial URL https://github.com/KomodoPlatform/Qaterial/archive/last-clang-working-2.zip)
