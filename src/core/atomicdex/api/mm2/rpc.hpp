@@ -22,6 +22,8 @@
 // Project Headers
 #include "../api.call.hpp"
 
+#ifdef __cpp_concepts
+
 namespace mm2::api
 {
     template <typename Rpc>
@@ -30,3 +32,5 @@ namespace mm2::api
         atomic_dex::api_call<Rpc> && Rpc::is_v2 && std::is_same_v<decltype(Rpc::is_v2), bool>;
     };
 }
+
+#endif // __cpp_concepts

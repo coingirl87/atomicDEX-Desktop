@@ -16,6 +16,8 @@
 
 #pragma once
 
+#ifdef __cpp_concepts
+
 namespace atomic_dex
 {
     template <typename T>
@@ -26,3 +28,5 @@ namespace atomic_dex
         typename T::expected_answer_type; t.answer;
     };
 }
+
+#endif // __cpp_concepts

@@ -37,7 +37,11 @@ namespace
         return web::http::client::http_client(FROM_STD_STR(::mm2::api::g_endpoint), cfg);
     }
 
+#ifdef __cpp_concepts
     template <mm2::api::rpc Rpc>
+#else
+    template <typename Rpc>
+#endif
     web::http::http_request make_request(typename Rpc::expected_request_type data_req = {})
     {
         web::http::http_request request;
@@ -56,8 +60,12 @@ namespace
         request.set_body(json_req.dump());
         return request;
     }
-
+    
+#ifdef __cpp_concepts
     template <mm2::api::rpc Rpc>
+#else
+    template <typename Rpc>
+#endif
     typename Rpc::expected_answer_type make_answer(const web::http::http_response& answer)
     {
         auto json_answer = nlohmann::json::parse(TO_STD_STR(answer.extract_string(true).get()));
