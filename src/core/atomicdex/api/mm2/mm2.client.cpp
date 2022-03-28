@@ -143,7 +143,11 @@ namespace atomic_dex
         return resp;
     }
 
+#ifdef __cpp_concepts
     template <::mm2::api::rpc ApiCallType>
+#else
+    template <typename ApiCallType>
+#endif
     void mm2_client::process_rpc_async(const std::function<void(typename ApiCallType::expected_answer_type)>& on_rpc_processed)
     {
         auto request = make_request<ApiCallType>();
