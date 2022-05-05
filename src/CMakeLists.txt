@@ -48,6 +48,18 @@ endif ()
 target_link_libraries(${PROJECT_NAME}_core INTERFACE SortFilterProxyModel)
 
 
+set(qml_qrc)
+set(assets_qrc)
+set(assets_qrc)
+set(imports_qrc ${CMAKE_SOURCE_DIR}/atomic_defi_design/imports/qml.qrc)
+dex_generate_qrc(${CMAKE_SOURCE_DIR}/atomic_defi_design/Dex qml_qrc
+    PATH_PREFIX "Dex"
+    FILES_TO_EXCLUDE ".gitignore;.DS_Store")
+dex_generate_qrc(${CMAKE_SOURCE_DIR}/atomic_defi_design/assets assets_qrc
+    PATH_PREFIX "assets"
+    FILES_TO_EXCLUDE ".gitignore;.DS_Store;CONTRIBUTING.txt;FONTLOG.txt;LICENCE-FAQ.txt;LICENCE.txt;README.txt;TRADEMARKS.txt")
+
+
 # Translation files
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM TRUE)
 set(TS_FILES
@@ -63,17 +75,6 @@ qt5_create_translation(QM_FILES
         OPTIONS -source-language en_US -no-obsolete)
 message(STATUS "QM FILES -> ${QM_FILES}")
 message(STATUS "TS FILES -> ${TS_FILES}")
-
-set(qml_qrc)
-set(assets_qrc)
-set(assets_qrc)
-set(imports_qrc ${CMAKE_SOURCE_DIR}/atomic_defi_design/imports/qml.qrc)
-dex_generate_qrc(${CMAKE_SOURCE_DIR}/atomic_defi_design/Dex qml_qrc 
-    PATH_PREFIX "Dex"
-    FILES_TO_EXCLUDE ".gitignore;.DS_Store")
-dex_generate_qrc(${CMAKE_SOURCE_DIR}/atomic_defi_design/assets assets_qrc 
-    PATH_PREFIX "assets"
-    FILES_TO_EXCLUDE ".gitignore;.DS_Store;CONTRIBUTING.txt;FONTLOG.txt;LICENCE-FAQ.txt;LICENCE.txt;README.txt;TRADEMARKS.txt")
 
 # Main executable
 add_executable(${PROJECT_NAME}
