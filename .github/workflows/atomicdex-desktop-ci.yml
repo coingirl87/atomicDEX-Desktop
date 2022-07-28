@@ -9,13 +9,8 @@ on:
   schedule:
     - cron: '0 0 * * 1'
 
-env:
-  DEX_PROJECT_NAME: "smartdex-desktop"
-  DEX_DISPLAY_NAME: "SmartDEX"
-  DEX_COMPANY: "SmartFi"
-  DEX_WEBSITE: "https://smartfi.com/"
-
 jobs:
+  environment: smartdex
 
   ci-flow:
     name: ${{ matrix.name }}
