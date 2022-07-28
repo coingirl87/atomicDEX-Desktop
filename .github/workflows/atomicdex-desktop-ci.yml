@@ -10,11 +10,10 @@ on:
     - cron: '0 0 * * 1'
 
 jobs:
-  environment: smartdex
-
   ci-flow:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
+    environment: smartdex
 
     strategy:
       fail-fast: false
