@@ -5,39 +5,39 @@
     <name>AddCustomCoinModal</name>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="27"/>
-        <source>Get the contract address from</source>
+        <source>Erhalte die Vertragsadresse von</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="123"/>
-        <source>Choose the asset type</source>
+        <source>Wählen Sie den Anlagen-Typ aus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="146"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="156"/>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="227"/>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="293"/>
-        <source>Next</source>
+        <source>Weiter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="171"/>
-        <source>Contract address</source>
+        <source>Vertragsadresse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="189"/>
-        <source>Enter the contract address</source>
+        <source>Geben Sie die Vertragsadresse ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="171"/>
-        <source>Choose the asset ticker</source>
+        <source>Wählen Sie den Vermögens-Ticker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -47,7 +47,7 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="180"/>
-        <source>Enter the ticker</source>
+        <source>Geben Sie den ticker ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -65,12 +65,12 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="240"/>
-        <source>Choose the asset logo</source>
+        <source>Wählen Sie das Logo des Vermögenswert aus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="245"/>
-        <source>Browse</source>
+        <source>Durchsuchen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
