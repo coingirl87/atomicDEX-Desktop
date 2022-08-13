@@ -310,7 +310,7 @@
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="341"/>
-        <source>Adresse </source>
+        <source>Adresse hinzufügen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -325,33 +325,33 @@
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="432"/>
-        <source>Confirm</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="444"/>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="499"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="478"/>
-        <source>The selected address belongs to a disabled coin, you need to enabled it before sending.</source>
+        <source>Die ausgewählte Adresse gehört zu einer deaktivierten Münze, Sie müssen sie vor dem Senden aktivieren.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="486"/>
-        <source>Enable</source>
+        <source>Aktivieren</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="549"/>
-        <source>Cannot send to this address</source>
+        <source>Kann nicht an diese Adresse gesendet werden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="553"/>
-        <source>Your balance is empty</source>
+        <source>Dein Guthaben ist leer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -361,17 +361,17 @@
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="580"/>
-        <source>Remove address ?</source>
+        <source>Adresse entfernen?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="584"/>
-        <source>Yes</source>
+        <source>Ja</source>
         <translation type="unfinished">Yes</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="585"/>
-        <source>No</source>
+        <source>Nein</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -379,27 +379,27 @@
     <name>AddressBookNewContactCategoryModal</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactCategoryModal.qml" line="19"/>
-        <source>Add a new tag</source>
+        <source>Einen neuen tag hinzufügen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactCategoryModal.qml" line="27"/>
-        <source>Enter the tag name</source>
+        <source>Geben Sie den tag-Name ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactCategoryModal.qml" line="42"/>
-        <source>This contact already has this tag</source>
+        <source>Dieser Kontakt hat bereits diesen tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactCategoryModal.qml" line="53"/>
-        <source>Add</source>
+        <source>Hinzufügen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactCategoryModal.qml" line="69"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
 </context>
@@ -407,27 +407,27 @@
     <name>AddressBookNewContactModal</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactModal.qml" line="16"/>
-        <source>Create a new contact</source>
+        <source>Erstellen Sie einen neuen Kontakt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactModal.qml" line="21"/>
-        <source>Enter the contact name</source>
+        <source>Geben Sie den Namen des Kontakt ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactModal.qml" line="34"/>
-        <source>This contact name already exists.</source>
+        <source>Dieser Kontaktname ist beteits vorhanden!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactModal.qml" line="50"/>
-        <source>Confirm</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookNewContactModal.qml" line="73"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
 </context>
@@ -435,12 +435,12 @@
     <name>AddressBookSendWalletSelector</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookSendWalletSelector.qml" line="19"/>
-        <source>Choose a valid </source>
+        <source>Wählen Sie eine gültige</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookSendWalletSelector.qml" line="19"/>
-        <source> coin</source>
+        <source> Münze</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -448,7 +448,7 @@
     <name>AddressBookWalletTypeList</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookWalletTypeList.qml" line="92"/>
-        <source>%1 is not enabled - You need to enable it before adding an address. Enable it ?&lt;br&gt;&lt;a href=&apos;#&apos;&gt;Yes&lt;/a&gt; - &lt;a href=&apos;#no&apos;&gt;No&lt;/a&gt;</source>
+        <source>%1 ist nicht aktiviert - Sie müssen es aktivieren, bevor Sie eine Adresse hinzufügen. Bitte aktivieren Sie es ?&lt;br&gt;&lt;a href=&apos;#&apos;&gt;Yes&lt;/a&gt; - &lt;a href=&apos;#no&apos;&gt;No&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -456,12 +456,12 @@
     <name>AddressBookWalletTypeListModal</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookWalletTypeListModal.qml" line="54"/>
-        <source>Select wallet type</source>
+        <source>Wählen Sie den Typ der Brieftasche</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookWalletTypeListModal.qml" line="63"/>
-        <source>Search</source>
+        <source>Suchen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -469,7 +469,7 @@
     <name>AmountChart</name>
     <message>
         <location filename="../../Dex/Portfolio/AmountChart.qml" line="332"/>
-        <source>Work in progress</source>
+        <source>In Arbeit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -477,7 +477,7 @@
     <name>App</name>
     <message>
         <location filename="../../Dex/App.qml" line="173"/>
-        <source>Recover Funds Result</source>
+        <source>Ergebnis: Rückzahlung der Geldmittel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -485,7 +485,7 @@
     <name>AssetPieChart</name>
     <message>
         <location filename="../../Dex/Portfolio/AssetPieChart.qml" line="182"/>
-        <source>Assets</source>
+        <source>Vermögenswerte</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -493,7 +493,7 @@
     <name>AssetsList</name>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="48"/>
-        <source>Asset</source>
+        <source>Vermögenswerte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -503,27 +503,27 @@
     </message>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="66"/>
-        <source>Fiat Balance</source>
+        <source>FIAT Balance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="75"/>
-        <source>Change 24h</source>
+        <source>Änderungen 24h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="84"/>
-        <source>Price</source>
+        <source>Preis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="92"/>
-        <source>Source</source>
+        <source>Quelle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Portfolio/AssetsList.qml" line="249"/>
-        <source>Price provider is: %1</source>
+        <source>Preisanbieter ist: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -531,7 +531,7 @@
     <name>Bottom</name>
     <message>
         <location filename="../../Dex/Sidebar/Bottom.qml" line="63"/>
-        <source>Settings</source>
+        <source>Einstellungen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
     </message>
     <message>
         <location filename="../../Dex/Sidebar/Bottom.qml" line="83"/>
-        <source>Privacy</source>
+        <source>Privatsphäre</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -549,17 +549,17 @@
     <name>CamouflagePasswordModal</name>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="19"/>
-        <source>Setup Camouflage Password</source>
+        <source>Camouflage-Passwort einrichten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="40"/>
-        <source>Camouflage Password is a secret password for emergency situations.</source>
+        <source>Das Camouflage Passwort ist ein geheimes Passwort für Notfallsituationen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="49"/>
-        <source>Using it to login will display your balance lower than it actually is.</source>
+        <source>Wenn Sie es zum anmelden nutzen, wird ihre Balance geringer angezeigt als sie in Wirklichkeit ist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -574,27 +574,27 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="66"/>
-        <source>Confirm pasword suffix</source>
+        <source>Passwort bestätigen suffix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="67"/>
-        <source>Enter a password suffix</source>
+        <source>Geben Sie ein Passwort-Suffix ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="68"/>
-        <source>Enter the same password suffix to confirm</source>
+        <source>Geben Sie das gleiche Passwort-Suffix ein, um es zu bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="75"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="85"/>
-        <source>Save</source>
+        <source>Sichern</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -602,22 +602,22 @@
     <name>CannotEnableCoinModal</name>
     <message>
         <location filename="../../Dex/Components/CannotEnableCoinModal.qml" line="15"/>
-        <source>Failed to enable %1</source>
+        <source>%1 konnte nicht aktiviert werden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CannotEnableCoinModal.qml" line="19"/>
-        <source>Enabling %1 did not succeed. Limit of enabled coins might have been reached.</source>
+        <source>Die Aktivierung von %1 war nicht erfolgreich. Das Limit der aktivierten Münzen könnte erreicht worden sein.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CannotEnableCoinModal.qml" line="28"/>
-        <source>Change limit in settings</source>
+        <source>Ändern Sie das Limit in den Einstellungen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CannotEnableCoinModal.qml" line="38"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
 </context>
@@ -630,7 +630,7 @@
     </message>
     <message>
         <location filename="../../Dex/Sidebar/Center.qml" line="79"/>
-        <source>Wallet</source>
+        <source>Brieftasche</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -640,7 +640,7 @@
     </message>
     <message>
         <location filename="../../Dex/Sidebar/Center.qml" line="101"/>
-        <source>Address Book</source>
+        <source>Adressbuch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -653,12 +653,12 @@
     <name>CexInfoModal</name>
     <message>
         <location filename="../../Dex/Components/CexInfoModal.qml" line="14"/>
-        <source>Market Data</source>
+        <source>Marktdaten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CexInfoModal.qml" line="20"/>
-        <source>Market data (prices, charts, etc.) marked with the ⓘ icon originates from third-party sources.&lt;br&gt;&lt;br&gt;Data is sourced via &lt;a href=&quot;https://bandprotocol.com/&quot;&gt;Band Decentralized Oracle&lt;/a&gt; and &lt;a href=&quot;https://coingecko.com&quot;&gt;CoinGecko&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Oracle Supported Pairs:&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;&lt;br&gt;&lt;b&gt;Last reference (Band Oracle):&lt;/b&gt;&lt;br&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;</source>
+        <source>Marktdaten (Preis, Charts, usw.) gekennzeichnet mit dem ⓘ Symbol stammt aus Quellen Dritter.&lt;br&gt;&lt;br&gt;Die Daten stammen von &lt;a href=&quot;https://bandprotocol.com/&quot;&gt;Band Decentralized Oracle&lt;/a&gt; and &lt;a href=&quot;https://coingecko.com&quot;&gt;CoinGecko&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Oracle unterstütze Paare:&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;&lt;br&gt;&lt;b&gt;Letzte Referenz (Band Oracle):&lt;/b&gt;&lt;br&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -666,17 +666,17 @@
     <name>Chart</name>
     <message>
         <location filename="../../Dex/Exchange/ProView/Chart.qml" line="13"/>
-        <source>Chart</source>
+        <source>Charts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/ProView/Chart.qml" line="105"/>
-        <source>Loading market data</source>
+        <source>Laden von Marktdaten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/ProView/Chart.qml" line="111"/>
-        <source>There is no chart data for this pair yet</source>
+        <source>Es gibt noch keine Chartdaten für dieses Paar</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -684,38 +684,38 @@
     <name>ClaimRewardsModal</name>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="79"/>
-        <source>Failed to prepare to claim rewards</source>
+        <source>Die Vorbereitung zum Einfordern von Belohnungen ist fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="111"/>
-        <source>Claim your %1 reward?</source>
+        <source>Belohnung  %1 einfordern?</source>
         <comment>TICKER</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="128"/>
-        <source>No UTXOs eligible for claiming</source>
+        <source>Es sind keine beanspruchungsberechtigten UTXOs vorhanden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="129"/>
-        <source>Transaction fee is higher than the reward!</source>
+        <source>Die Transaktionsgebühren sind höher als die Belohnung!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="130"/>
-        <source>You will receive </source>
+        <source>Sie erhalten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="141"/>
-        <source>Refresh</source>
+        <source>Aktualisieren</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="149"/>
-        <source>Read more about KMD active users rewards</source>
+        <source>Lesen Sie mehr über die Belohnung für aktive Nutzer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -725,77 +725,77 @@
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="182"/>
-        <source>Amount</source>
+        <source>Menge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="198"/>
-        <source>Reward</source>
+        <source>Belohnung</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="214"/>
-        <source>Accruing Start</source>
+        <source>Anfallender Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="230"/>
-        <source>Accruing Stop</source>
+        <source>Anfallender Stopp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="246"/>
-        <source>Time Left</source>
+        <source>Verbleibende Zeit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="262"/>
-        <source>Error</source>
+        <source>Fehler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="391"/>
-        <source>Locktime is not set</source>
+        <source>Sperrzeit ist nicht festgelegt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="394"/>
-        <source>Locktime is less than the threshold</source>
+        <source>Die Sperrzeit liegt unter dem Schwellenwert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="397"/>
-        <source>UTXO height is greater than end of the era</source>
+        <source>Die UTXO-Höhe ist größer als das Ende der Epoche</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="400"/>
-        <source>UTXO amount is less than 10</source>
+        <source>Die UTXO-Menge ist kleiner als 10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="403"/>
-        <source>One hour did not pass yet</source>
+        <source>Eine Stunde ist noch nicht vorbei</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="406"/>
-        <source>Transaction is in mempool</source>
+        <source>Die Transaktion befindet sich im mempool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="409"/>
-        <source>Unknown problem</source>
+        <source>Unbekanntes Problem</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="436"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/ClaimRewardsModal.qml" line="450"/>
-        <source>Confirm</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -803,29 +803,29 @@
     <name>CoinMenu</name>
     <message>
         <location filename="../../Dex/Components/CoinMenu.qml" line="29"/>
-        <source>Disable %1</source>
+        <source>Deaktiviere %1</source>
         <comment>TICKER</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CoinMenu.qml" line="35"/>
-        <source>Disable and Delete %1</source>
+        <source>Deaktiviere und lösche %1</source>
         <comment>TICKER</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CoinMenu.qml" line="47"/>
-        <source>Disable all %1 assets</source>
+        <source>Deaktiviere alle %1 Vermögenswerte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CoinMenu.qml" line="53"/>
-        <source>Disable all assets</source>
+        <source>Deaktiviere alle Vermögenswerte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/CoinMenu.qml" line="60"/>
-        <source>Disable 0 balance assets</source>
+        <source>Deaktiviere Vermögenswerte mit einer Balance von 0</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -833,7 +833,7 @@
     <name>Combo_fiat</name>
     <message>
         <location filename="../../Dex/Settings/Combo_fiat.qml" line="37"/>
-        <source>Language</source>
+        <source>Sprache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -843,7 +843,7 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/Combo_fiat.qml" line="100"/>
-        <source>Recommended: </source>
+        <source>Empfohlen: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -851,37 +851,37 @@
     <name>ConfirmMultiOrderTradeModal</name>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="24"/>
-        <source>Confirm Multi Order Details</source>
+        <source>Multi-Order-Details bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="76"/>
-        <source>These swaps requests can not be undone and this is the final event!</source>
+        <source>Diese Tausch-Anfrage kann nicht rückgängig gemacht werden und dies ist das endgültige Ereignis!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="82"/>
-        <source>These transactions can take up to 60 mins - DO NOT close this application!</source>
+        <source>Diese Transaktion kann bis zu 60 Minuten dauern - Schließen Sie nicht das Programm!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="89"/>
-        <source>Same funds will be used until an order matches.</source>
+        <source>Die gleichen Mittel werden verwendet, bis eine Bestellung übereinstimmt.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="96"/>
-        <source>Note that if one order is filled other will not be cancelled.</source>
+        <source>Beachten Sie, dass, wenn eine Bestellung ausgeführt wird, eine andere nicht storniert wird.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="105"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmMultiOrderTradeModal.qml" line="111"/>
-        <source>Confirm</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -894,74 +894,74 @@
     <name>ConfirmTradeModal</name>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="23"/>
-        <source>Confirm Exchange Details</source>
+        <source>Bestätige Börsen-Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="53"/>
-        <source>This swap request can not be undone and is a final event!</source>
+        <source>Diese Tausch-Anfrage kann nicht rückgängig gemacht werden und ist ein endgültiges Ereignis.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="59"/>
-        <source>This transaction can take up to 60 mins - DO NOT close this application!</source>
+        <source>Diese Transaktion kann bis zu 60 Minuten dauern - Schließen Sie nicht das Programm!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="93"/>
-        <source>&lt;b&gt;Total %1 fees:&lt;/b&gt;</source>
+        <source>&lt;b&gt;Gesamt %1 Gebühren :&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="136"/>
-        <source>Security configuration</source>
+        <source>Sicherheitskonfigurationen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="143"/>
-        <source>dPoW protected</source>
+        <source>dPoW geschützt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="144"/>
-        <source>%1 confirmations for incoming %2 transactions</source>
+        <source>%1 Bestätigungen für ankommende %2 Transaktionen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="151"/>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="196"/>
-        <source>Read more about dPoW</source>
+        <source>Lesen Sie mehr über dPoW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="166"/>
-        <source>Use custom protection settings for incoming %1 transactions</source>
+        <source>Verwenden Sie benutzerdefinierte Schutzeinstellungen für ankommende %1 Transaktionen</source>
         <comment>TICKER</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="189"/>
-        <source>Enable Komodo dPoW security</source>
+        <source>Komodo dPoW-Sicherheit aktivieren</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="218"/>
-        <source>Required Confirmations</source>
+        <source>Erforderliche Bestätigungen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="258"/>
-        <source>Warning, this atomic swap is not dPoW protected!</source>
+        <source>Warnung, dieser Atomic Swap ist nicht dPoW geschützt!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="276"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="286"/>
-        <source>Confirm</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -969,7 +969,7 @@
     <name>CopyFieldButton</name>
     <message>
         <location filename="../../Dex/Components/CopyFieldButton.qml" line="25"/>
-        <source>Copied to Clipboard</source>
+        <source>In die Zwischenablage kopiert</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
