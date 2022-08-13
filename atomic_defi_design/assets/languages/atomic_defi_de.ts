@@ -52,7 +52,7 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="197"/>
-        <source>Get the contract address from </source>
+        <source>Erhalten Sie die Vertragsadresse von</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -60,7 +60,7 @@
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="284"/>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="371"/>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="469"/>
-        <source>Previous</source>
+        <source>Vorherige</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -75,17 +75,17 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="257"/>
-        <source>Please choose the asset logo</source>
+        <source>Wählen Sie bitte das Logo des Vemögenswert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="304"/>
-        <source>Configuration</source>
+        <source>Konfiguration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="310"/>
-        <source>All configuration fields will be fetched using the contract address you provided.</source>
+        <source>Alle Konfigurationsfelder werden unter Verwendung der von Ihnen angegebenen Vertragsadresse abgerufen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -95,7 +95,7 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="320"/>
-        <source>Enter the name</source>
+        <source>Geben Sie den Namen ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -105,48 +105,48 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="328"/>
-        <source>Enter the Coingecko ID</source>
+        <source>Geben Sie die Coingecko ID ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="335"/>
-        <source>Get the Coingecko ID</source>
+        <source>Coingecko ID erhalten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="358"/>
-        <source>Active</source>
+        <source>Aktiv</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="380"/>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="396"/>
-        <source>Preview</source>
+        <source>Vorherige</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="402"/>
-        <source>WARNING: Application will restart immidiately to apply the changes!</source>
+        <source>WARNUNG: Die Anwendung wird umgehend neu gestartet, um die Änderungen anzuwenden!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="426"/>
-        <source>Asset not found, please go back and make sure Contract Address is correct</source>
+        <source>Der Vermögenswert wurde nicht gefunden, bitte gehen Sie zurück und stellen Sie sicher, dass die Vertragsadresse korrekt ist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="445"/>
-        <source>Config Fields</source>
+        <source>Konfigurationsfelder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="458"/>
-        <source>Fetched Data</source>
+        <source>Abgerufene Daten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/AddCustomCoinModal.qml" line="477"/>
-        <source>Submit &amp; Restart</source>
+        <source>Einreichen und Neustarten</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -154,17 +154,17 @@
     <name>AddressBook</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="35"/>
-        <source>Address Book</source>
+        <source>Addressbuch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="79"/>
-        <source>Search a contact by name or tags</source>
+        <source>Suchen Sie einen Kontakt nach Namen oder Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="49"/>
-        <source>New Contact</source>
+        <source>Neuer Kontakt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -174,37 +174,37 @@
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="112"/>
-        <source>Tags (first 6)</source>
+        <source>Tags (ersten 6)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="120"/>
-        <source>Actions</source>
+        <source>Aktionen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="213"/>
-        <source>Edit</source>
+        <source>Bearbeiten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="230"/>
-        <source>Remove</source>
+        <source>Entfernen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="270"/>
-        <source>Do you want to remove this contact ?</source>
+        <source>Möchten Sie diesen Kontakt entfernen?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="274"/>
-        <source>Yes</source>
+        <source>Ja</source>
         <translation type="unfinished">Yes</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBook.qml" line="283"/>
-        <source>No</source>
+        <source>Nein</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -212,52 +212,52 @@
     <name>AddressBookAddContactAddressModal</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="58"/>
-        <source>Edit address entry</source>
+        <source>Adresseingabe bearbeiten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="58"/>
-        <source>Create a new address</source>
+        <source>Erstellen Sie eine neue Adresse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="64"/>
-        <source>Selected wallet: %1</source>
+        <source>Ausgewählte Brieftasche: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="64"/>
-        <source>NONE</source>
+        <source>Keine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="76"/>
-        <source>Enter a name</source>
+        <source>Geben Sie einen Namen ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="90"/>
-        <source>This key already exists.</source>
+        <source>Dieser Schlüssel existiert bereits.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="102"/>
-        <source>Enter the address</source>
+        <source>Geben Sie die Adresse ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="136"/>
-        <source>Validate</source>
+        <source>Bestätigen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="142"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookAddContactAddressModal.qml" line="128"/>
-        <source>Convert</source>
+        <source>Umwandeln</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -265,52 +265,52 @@
     <name>AddressBookEditContactModal</name>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="59"/>
-        <source>Edit contact</source>
+        <source>Kontakt bearbeiten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="66"/>
-        <source>Contact Name</source>
+        <source>Name des Kontakt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="67"/>
-        <source>Enter a contact name</source>
+        <source>Geben Sie ein Kontaktnamen ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="86"/>
-        <source>Address List</source>
+        <source>Adressenliste</ source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="93"/>
-        <source>Search for an address entry.</source>
+        <source>Suchen Sie nach einem Adresseintrag.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="155"/>
-        <source>Type</source>
+        <source>Art</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="185"/>
-        <source>Key</source>
+        <source>Schlüssel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="215"/>
-        <source>Address</source>
+        <source>Adresse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="243"/>
-        <source>Actions</source>
+        <source>Aktionen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/AddressBookEditContactModal.qml" line="341"/>
-        <source>Add Address</source>
+        <source>Adresse </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
