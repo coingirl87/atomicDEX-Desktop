@@ -1173,12 +1173,12 @@
     <name>DeleteWalletModal</name>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="22"/>
-        <source>Brieftasche löschen</source>
+        <source>Delete Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="44"/>
-        <source>Sind Sie sicher, dass Sie die %1 Brieftasche löschen möchten?</source>
+        <source>Are you sure you want to delete %1 wallet?</source>
         <comment>WALLET_NAME</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1189,22 +1189,22 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="62"/>
-        <source>Geben Sie das Passwort ihrer Brieftasche ein</source>
+        <source>Enter your wallet password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="66"/>
-        <source>Falsches Passwort</source>
+        <source>Wrong Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="74"/>
-        <source>Abbrechen</source>
+        <source>Cancel</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="80"/>
-        <source>Löschen</source>
+        <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1212,7 +1212,7 @@
     <name>DexAppPasswordField</name>
     <message>
         <location filename="../../Dex/Components/DexAppPasswordField.qml" line="34"/>
-        <source>Passwort eingeben</source>
+        <source>Type password</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
