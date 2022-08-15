@@ -977,12 +977,12 @@
     <name>Dashboard</name>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="96"/>
-        <source>The current number of enabled coins does not match your configuration specification. Your assets configuration will be reset.</source>
+        <source>Die aktuelle Anzahl aktivierter Münzen stimmt nicht mit Ihrer Konfigurationsvorgabe überein. Ihre Asset-Konfiguration wird zurückgesetzt.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="306"/>
-        <source>Matching</source>
+        <source>Abgleich</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -992,132 +992,132 @@
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="308"/>
-        <source>Matched</source>
+        <source>Abgestimmt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="308"/>
-        <source>Order Matched</source>
+        <source>Bestellung abgestimmt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="310"/>
-        <source>Ongoing</source>
+        <source>Fortlaufend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="310"/>
-        <source>Swap Ongoing</source>
+        <source>Laufender Austausch </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="312"/>
-        <source>Successful</source>
+        <source>Erfolgreich</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="312"/>
-        <source>Swap Successful</source>
+        <source>Austausch erfolgreich</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="314"/>
-        <source>Refunding</source>
+        <source>Erstattung</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="316"/>
-        <source>Failed</source>
+        <source>Fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="316"/>
-        <source>Swap Failed</source>
+        <source>Austausch Fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="318"/>
-        <source>Unknown</source>
+        <source>Unbekannt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="318"/>
-        <source>Unknown State</source>
+        <source>Unbekannter Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="332"/>
-        <source>Started</source>
+        <source>Begonnen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="334"/>
-        <source>Negotiated</source>
+        <source>Verhandelt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="336"/>
-        <source>Taker fee sent</source>
+        <source>Abnehmer-Gebühren gesendet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="338"/>
-        <source>Maker payment received</source>
+        <source>Hersteller-Bezahlung erhalten</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="340"/>
-        <source>Maker payment wait confirm started</source>
+        <source>Hersteller-Zahlungswartebestätigung gestartetMaker payment wait confirm started</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="342"/>
-        <source>Maker payment validated and confirmed</source>
+        <source>Hersteller-Bezahlung validiert und bestätigt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="344"/>
-        <source>Taker payment sent</source>
+        <source>Abnehmer-Bezahlung gesendet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="346"/>
-        <source>Taker payment spent</source>
+        <source>Abnehmer-Zahlung ausgegeben</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="348"/>
-        <source>Maker payment spent</source>
+        <source>Hersteller-Zahlung ausgegeben</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="350"/>
-        <source>Finished</source>
+        <source>Fertig</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="352"/>
-        <source>Start failed</source>
+        <source>Start fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="354"/>
-        <source>Negotiate failed</source>
+        <source>Verhandlung gescheitert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="356"/>
-        <source>Taker fee validate failed</source>
+        <source>Validierung der Abnehmer-Gebühr fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="358"/>
-        <source>Maker payment transaction failed</source>
+        <source>Hersteller-Zahlungstransaktion fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Screens/Dashboard.qml" line="360"/>
-        <source>Maker payment Data send failed</source>
+        <source>Hersteller-Zahlungsdaten senden fehlgeschlagen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1160,12 +1160,12 @@
     <name>DefaultRangeSlider</name>
     <message>
         <location filename="../../Dex/Components/DefaultRangeSlider.qml" line="107"/>
-        <source>Min</source>
+        <source>Minimum</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Components/DefaultRangeSlider.qml" line="115"/>
-        <source>Max</source>
+        <source>Maximum</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1173,12 +1173,12 @@
     <name>DeleteWalletModal</name>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="22"/>
-        <source>Delete Wallet</source>
+        <source>Brieftasche löschen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="44"/>
-        <source>Are you sure you want to delete %1 wallet?</source>
+        <source>Sind Sie sicher, dass Sie die %1 Brieftasche löschen möchten?</source>
         <comment>WALLET_NAME</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1189,22 +1189,22 @@
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="62"/>
-        <source>Enter your wallet password</source>
+        <source>Geben Sie das Passwort ihrer Brieftasche ein</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="66"/>
-        <source>Wrong Password</source>
+        <source>Falsches Passwort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="74"/>
-        <source>Cancel</source>
+        <source>Abbrechen</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/DeleteWalletModal.qml" line="80"/>
-        <source>Delete</source>
+        <source>Löschen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1212,7 +1212,7 @@
     <name>DexAppPasswordField</name>
     <message>
         <location filename="../../Dex/Components/DexAppPasswordField.qml" line="34"/>
-        <source>Type password</source>
+        <source>Passwort eingeben</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
