@@ -396,7 +396,8 @@
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="62"/>
         <source>Here you enter the suffix and at login you need to enter {real_password}{suffix}</source>
-        <translation>Hier geben Sie den Zusatz ein und beim Einloggen benötigen Sie {real_password}{suffix}</translation>
+        <translation>Hier geben Sie den Zusatz ein und beim Einloggen benötigen Sie {echtes Kennwort}{suffix}
+Beispiel: Kennwort = 1234    Suffix=56    Eingabe beim Login=123456</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/CamouflagePasswordModal.qml" line="71"/>
