@@ -2945,7 +2945,7 @@ Bitte wählen Sie einen neuen Auftrag aus.</translation>
     <message>
         <location filename="../../Dex/Wallet/SendModal.qml" line="264"/>
         <source>Prepare to send </source>
-        <translation>Versandvorbereitung von</translation>
+        <translation>Versandvorbereitung von </translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/SendModal.qml" line="284"/>
