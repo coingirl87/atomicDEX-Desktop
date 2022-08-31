@@ -4162,7 +4162,7 @@ Die Netzwerkgebühren können je nach ausgewähltem Handelspaar stark variieren.
     <message>
         <location filename="../../Dex/Wallet/TransactionDetailsModal.qml" line="111"/>
         <source>To</source>
-        <translation>Bis</translation>
+        <translation>Nach</translation>
     </message>
     <message>
         <location filename="../../Dex/Wallet/TransactionDetailsModal.qml" line="119"/>
