@@ -2531,8 +2531,10 @@ Rechter Schieber: Legt das Volumen fest, das Sie handeln möchten.</translation>
         <location filename="../../Dex/Exchange/Trade/SimpleView/OrderRemovedModal.qml" line="20"/>
         <source>The selected order does not exist anymore, it might have been matched or canceled, and no order with a better price is available.
 Please select a new order.</source>
-        <translation> Der ausgewählte Auftrag existiert nicht mehr, er wurde möglicherweise zugeordnet oder storniert, und es ist kein Auftrag mit einem besseren Preis verfügbar.
-Bitte wählen Sie einen neuen Auftrag aus.</translation>
+        <translation>Der ausgewählte Auftrag existiert nicht mehr!
+            Er wurde möglicherweise zugeordnet oder storniert und es ist kein Auftrag mit einem besseren Preis verfügbar.
+
+            Bitte wählen Sie einen neuen Auftrag aus.</translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/SimpleView/OrderRemovedModal.qml" line="27"/>
