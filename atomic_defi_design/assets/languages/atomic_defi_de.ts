@@ -1846,7 +1846,10 @@ Try again or select &apos;Allow custom seed&apos; to continue.</source>
         <location filename="../../Dex/Exchange/ProView/TradingInfo/Main.qml" line="48"/>
         <location filename="../../Dex/Exchange/Trade/SimpleView/Main.qml" line="100"/>
         <source>Orders</source>
-        <translation>Aufträge</translation>
+        <translation type="unfinished">
+            <numerusform>Auftrag</numerusform>
+            <numerusform>Aufträge</numerusform>
+        </translation>    
     </message>
     <message>
         <location filename="../../Dex/Exchange/ProView/TradingInfo/Main.qml" line="56"/>
@@ -3638,7 +3641,10 @@ Please select a new order.</source>
         <location filename="../../Dex/Exchange/Trade/SimpleView/SubOrders.qml" line="84"/>
         <location filename="../../Dex/Exchange/Trade/SimpleView/SubOrders.qml" line="285"/>
         <source>Orders</source>
-        <translation>Aufträge</translation>
+        <translation type="unfinished">
+            <numerusform>Auftrag</numerusform>
+            <numerusform>Aufträge</numerusform>
+        </translation> 
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/SimpleView/SubOrders.qml" line="119"/>
