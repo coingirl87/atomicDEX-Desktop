@@ -730,7 +730,7 @@ Beispiel: Kennwort = 1234    Suffix=56    Eingabe beim Login=123456</translation
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="24"/>
         <source>Confirm Exchange Details</source>
-        <translation>Bestätigen Sie die Börsen-Details</translation>
+        <translation>Bestätigen Sie die Austausch-Details</translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/ConfirmTradeModal.qml" line="77"/>
