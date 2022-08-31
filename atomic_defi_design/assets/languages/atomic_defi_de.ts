@@ -3941,7 +3941,7 @@ Die Netzwerkgebühren können je nach ausgewähltem Handelspaar stark variieren.
     <message>
         <location filename="../../Dex/Exchange/Trade/SimpleView/Trade.qml" line="537"/>
         <source>Pick an order</source>
-        <translation>Wählen Sie einen Auftrag</translation>
+        <translation>Auftrag auswählen</translation>
     </message>
     <message>
         <location filename="../../Dex/Exchange/Trade/SimpleView/Trade.qml" line="620"/>
