@@ -3191,7 +3191,7 @@ Bitte wählen Sie einen neuen Auftrag aus.</translation>
     <message>
         <location filename="../../Dex/Settings/SettingModal.qml" line="43"/>
         <source>Are you sure you want to log out?</source>
-        <translation>Sie sich wirklich abmelden?</translation>
+        <translation>Wollen Sie sich wirklich abmelden?</translation>
     </message>
     <message>
         <location filename="../../Dex/Settings/SettingModal.qml" line="46"/>
